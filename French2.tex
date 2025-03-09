@@ -1,0 +1,240 @@
+\documentclass[theme]{cv_einstein}
+% Read cv_einstein.cls to look at all available options
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage[french]{babel}
+\usepackage{tikz}
+% Caution: pargin=0cm means the CV won't print well.
+% Using this template means that you accept it.
+\usepackage[a4paper, portrait, margin=0cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{array} % For better tabl formatting. See: https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+\usepackage{enumitem} % See https://tex.stackexchange.com/a/199073/304372
+\usepackage[pdftex, pdfauthor={Albert Einstein}, pdftitle={Albert Einstein, Public CV}, pdfsubject={CV of Albert Einstein},
+pdfkeywords={Physics, Science, Applied Research, Fundamental Research}]
+{hyperref}
+
+
+
+
+\begin{document}
+%------------------------------------------------------------------ Variables
+% The left column contains the goals, summary, skills, etc.
+% We define its width w.r.t. the width of the whole page
+\newcommand{\lratio}{0.318}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{\lratio\textwidth}
+% The right column contains the main content, i.e. work experience, education, etc.
+\newcommand{\rratio}{0.705}
+\newlength{\rightcolwidth}
+\setlength{\rightcolwidth}{\rratio\textwidth}
+% Space to leave below a section, above the title of the following section
+\newlength{\sectionspace}
+\setlength{\sectionspace}{0.5cm}
+% Space to leave below an item, above the following item
+\newlength{\itemspace}
+\setlength{\itemspace}{10pt}
+% fbox stuff. You won't need to adjust these. You can safely ignore.
+\setlength{\fboxrule}{0pt}
+\setlength{\fboxsep}{4pt}
+% Shortcuts to have table columns with fixed width AND positionning: [L]eft, [C]enter, [R]ight
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Removes the (ugly) box around html links
+\hypersetup{hidelinks}
+%------------------------------------------------------------------
+\title{Albert Einstein}
+\author{\LaTeX{} Albert Einstein}
+\date{1955}
+
+
+
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %                       UPPER PART
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    %                       HEADER
+    %-------------------------------------------------------------
+    %Usage: \header{background-color}{name-color}{name}{title-color}{title}{summary-color}{summary}{portrait.jpg}{email@example.com}{phone}{country-flag.png}{city}{linkedin-id}
+    \header
+    {\textbf{Moussa Kalla}}
+    {\textbf{Stagiaire - Modélisation Mathématique et Data Science }}
+    { 
+%Futur Data Scientist, je suis toujours aussi désireux d’apprendre, prêt à relever de nouveaux défis et à contribuer activement à des projets concrets. Doté d'unecréativité fertile et d'une forte productivité, je suis persuadé que ma contribution constituera un atout précieux pour votre équipe.
+Futur Data Scientist, je suis toujours aussi désireux d’apprendre, prêt à relever de nouveaux défis et à contribuer activement à des projets concrets. Doté d’une créativité fertile et d’une forte productivité, je suis persuadé que ma contribution constituera un atout précieux pour
+votre équipe.
+    }
+    {assets/portrait2.jpg}
+
+    %-------------------------------------------------------------
+    %                       CONTACT BAND
+    %-------------------------------------------------------------
+    % Usage: \contactband{background-color}{text-color}{email}{phone-number}{country-flag}{city}{linkedin-id}
+    \contactband{moussa.kalla.am@gmail.com }{+33 744885914}{assets/france2.jpg}{Dunkerque, France}{Moussa-Kalla}{}
+
+    \vspace{\headerheight} % The header is only a TIKZ image. We must give it space to appear and not be hidden by what comes next.
+
+    \setlength{\columnsep}{0px}
+    \columnratio{\lratio}
+    \begin{paracol}{2}
+        \paracolbackgroundoptions
+
+        
+        \begin{leftcolumn}
+        
+        {\color{white}    
+        \noindent \footnotesize
+           \footnotesize\color{white}
+            \heading{\faCogs}{Mes Compétences}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{c}
+                    \bubblediagram{
+                    % Usage: \bubblediagram{list of comma-separated text items}
+                    % The first item will be written in the main bubble, at the center of the diagram
+                    % All other items will be written in their own satellite bubble
+                        % Main bubble
+                        {\textbf{\;\;Programmation} \\ \textbf{\&}\\
+                        \textbf{Logiciels}},
+                        \textbf{\;\;IBA\;\;} \\  \textbf{\;\;Analyser\;\;},
+                        \textbf{Python \& C++},
+                        \textbf{TensorFlow}\\ \textbf{\& PyTorch},
+                        \textbf{POWER BI},
+                         \textbf{\;\;\;Le pack\;} \\ \textbf{\;\;\;Office\;\;\;\;},
+                        \textbf{\;\;R Studio\;\;},
+                        \textbf{\;Matlab\;}
+                       } 
+                \end{tabular}
+            \end{minipage}
+\begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{c}
+                    \bubblediagram{
+                    % Usage: \bubblediagram{list of comma-separated text items}
+                    % The first item will be written in the main bubble, at the center of the diagram
+                    % All other items will be written in their own satellite bubble
+                        % Main bubble
+                        {\textbf{Data Science} \\ \textbf{\&}\\
+                        \textbf{Machine Learning}},
+                        % Satellites
+                        \textbf{Data Analysis},
+                        \textbf{Database} \\  \textbf{Management} \\  \textbf{System},
+                        \textbf{Deep Learning},
+                        \textbf{\;Data\;} \\ \textbf{\;\;Modeling\;\;},
+                        \textbf{Data Mining}
+                       } 
+                \end{tabular}
+            \end{minipage}
+
+\heading{\faStar}{SOFTSKILLS }
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                     Capacité d'adaptation & \pictofraction{4}\\ [0.04em]
+                    Esprit d'équipe & \pictofraction{4}\\ [0.04em]
+                    Dynamisme & \pictofraction{4}
+                \end{tabular}
+            \end{minipage}
+        }
+        \end{leftcolumn}
+         \begin{leftcolumn} \noindent \footnotesize
+        {\color{white}
+            %-------------------------------------------------------------
+            %                       LANGUAGES
+            %-------------------------------------------------------------
+              % To leave a margin with the top of the page
+            \heading{\faLanguage}{Langues}
+            \begin{minipage}[r]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                    \textbf{Haoussa} &    \textbf{Langue maternelle} \\[0.03em]
+                    \textbf{Français} & \textbf{Bilingue}\\[0.03em]
+                    \textbf{Anglais}  & \textbf{Professionnel}
+                \end{tabular}
+            \end{minipage}
+        }
+        \end{leftcolumn}
+                \begin{rightcolumn}\noindent \normalsize{
+            \hspace{-2.4pt}\heading{\faSuitcase}{Expériences professionnels }
+            \cvevent{2024}{Mars - Sept}{Stage Ingénieur - Modelisation \& Data Science }{ArcelorMittal}{Dunkerque, France}{assets/arcelormittal_.jpg}
+            {\normalsize $\bullet$ Pilotage d'un projet innovant pour l'optimisation de la détection d'incidents dans le processus de la coulée continue en développant un modèle prédictif de Deep Learning pour le clustering et classification des séries temporels issues des données thermiques en temps réel. \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+             \;\;\;\;\;\;\;\;\;\;
+             $\bullet$ Mes responsabilités incluent la préparation des données, le développement du modèle et son implémentation dans un environnement industriel réel.}
+            \vspace{0.07cm}\\
+            \cvevent{2023}{Oct - Déc}{Projet - Big Data, Machine Learning \& Quantitative Research }{École d’ingénieur du Littoral cote d’Opale}{Calais, France}{assets/EILCO5.jpg}
+            {\normalsize $\bullet$ Élaboration d'une stratégie de trading à haute fréquence, enrichie par le Deep Learning, axée sur de l'arbitrage statistique et l'intégration de modèles de Value at Risk et GARCH.}
+            \vspace{0.1cm}\\
+            \cvevent{2022}{Févr - Juin}{Stage de fin d'étude - Approximation des équations stochastiques}{Faculté des Sciences et Techniques}{Béni Mellal, Maroc}{assets/fstbm1.jpg}
+            {\normalsize Application du modèle de Black-Scholes-Merton pour : \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:
+            $\bullet$ L'évaluation d'une option et de quelques autres produits dérivés:\.\: \:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Modélisation des cours de bourse.} }
+        \end{rightcolumn}
+          \begin{rightcolumn}\noindent \small
+            \hspace{-2.4pt}\heading{\faGraduationCap}{Diplômes et Formations}
+            \cvevent{2023 - 2024}{}{Master 2 - Ingénierie des Systèmes Complexes, Option : Data Science \& IA }{École d’ingénieur du Littoral cote d’Opale\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:Université du Littoral Côte d'Opale}{Calais, France}{assets/Eilco5.jpg}
+            {\normalsize $\bullet$ Big data, Analyse des données, Machine Learning,
+             Deep Learning.\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Admis dans cette école via un programme d'échange.}
+              \vspace{0.07cm}\\
+            \cvevent{2022 - 2023}{}{Master 1 - Fondements et Ingénierie Mathématique}{Faculté des Sciences \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: Université Mohammed V}{Rabat, Maroc}{assets/FSR3.jpg}
+            {\normalsize $\bullet$ Modélisation stochastique, Optimisation avancée, Programmation mathématique. .\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Ce Master est hautement sélectif au sein du royaume et offre une formation de\:\:\: \:\:\:pointe en mathématiques fondamentales et appliquées.}
+               \vspace{0.07cm}\\
+            \cvevent{2018 - 2022}{}{Diplôme de licence - Génie Mathématique}{Faculté des Sciences et Techniques \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: Université Sultan Moulay Slimane}{Béni Mellal, Maroc}{assets/fstbm1.jpg}
+            {\normalsize $\bullet$ Statistique inférentielle et multivariée,  Probabilités avancées,  Théorie de la mesure. \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:$\bullet$ Projet de fin d'étude : Approximation des équations stochastiques }
+              \vspace{0.07cm}\\
+            \cvdevent{2015 - 2018}{}{Baccalauréat - Série scientifique D}{Lycée Issa Korombé}{Niamey, Niger}{}
+            {\normalsize $\bullet$ Premier de mon lycée.}}
+            \end{rightcolumn}
+
+          
+            
+        
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+       
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        
+\begin{leftcolumn} \noindent \small
+    \heading{\faHeartbeat}{Mes Hobbies}
+    \textcolor{white}{\: \faLineChart\ Bourse }
+    \textcolor{white}{\:\faSoccerBallO \ Football} \textcolor{white}{\: \faGamepad\ Jeux vidéo}  \\
+    \textcolor{white}{\: \faBook\ Lecture}
+    \textcolor{white}{\: \faLeaf\ Écologie}
+    \textcolor{white}{\: \faPlane\ Voyages }
+\end{leftcolumn}
+        \begin{leftcolumn}\noindent \footnotesize
+        {\color{white}
+           \heading{\faTrophy}{mes distinctions}
+\normalsize 
+ $\Longrightarrow$ Boursier d'excellence de l'ICESCO \\  (2023 - 2024) \\ [0.5em]
+ $\Longrightarrow$  Boursier d'excellence de coopération \\ \;\;\;\; Niger - Maroc  (2018 - 2022) \\ [0.5em]
+ $\Longrightarrow$ Boursier de l'AMCI (2018 - 2023)
+
+}
+        \end{leftcolumn}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \normalsize
+            \hspace{-2.4pt}\heading{\faTv}{AUTO-ÉDUCATION}
+            \cvcevent{2023}{Sept - oct}{Mathematics Of Big Data And Machine Learning}{VIA MIT OPEN COURSE WARE}{}{assets/mit.jpg}
+            {\normalsize $\bullet$ Cette formation aborde le modèle de données dimensionnelles distribuées dynamiques (D4M), qui fusionne la théorie des graphes, l'algèbre linéaire et les bases de données pour résoudre les défis liés aux Big Data.}
+             
+          
+            \end{rightcolumn}
+            \begin{rightcolumn}\noindent \small
+        \end{rightcolumn}
+        \vspace{0em}
+    \end{paracol}
+\end{document}

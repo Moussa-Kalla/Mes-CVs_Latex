@@ -1,0 +1,249 @@
+\documentclass[theme]{cv_einstein}
+% Read cv_einstein.cls to look at all available options
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{fontawesome}
+\usepackage[french]{babel}
+
+% Caution: pargin=0cm means the CV won't print well.
+% Using this template means that you accept it.
+\usepackage[a4paper, portrait, margin=0cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{array} % For better tabl formatting. See: https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+\usepackage{enumitem} % See https://tex.stackexchange.com/a/199073/304372
+\usepackage[pdftex, pdfauthor={Albert Einstein}, pdftitle={Albert Einstein, Public CV}, pdfsubject={CV of Albert Einstein},
+pdfkeywords={Physics, Science, Applied Research, Fundamental Research}]
+{hyperref}
+
+
+
+
+\begin{document}
+%------------------------------------------------------------------ Variables
+% The left column contains the goals, summary, skills, etc.
+% We define its width w.r.t. the width of the whole page
+\newcommand{\lratio}{0.3185}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{\lratio\textwidth}
+% The right column contains the main content, i.e. work experience, education, etc.
+\newcommand{\rratio}{0.705}
+\newlength{\rightcolwidth}
+\setlength{\rightcolwidth}{\rratio\textwidth}
+% Space to leave below a section, above the title of the following section
+\newlength{\sectionspace}
+\setlength{\sectionspace}{0.5cm}
+% Space to leave below an item, above the following item
+\newlength{\itemspace}
+\setlength{\itemspace}{10pt}
+% fbox stuff. You won't need to adjust these. You can safely ignore.
+\setlength{\fboxrule}{0pt}
+\setlength{\fboxsep}{4pt}
+% Shortcuts to have table columns with fixed width AND positionning: [L]eft, [C]enter, [R]ight
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Removes the (ugly) box around html links
+\hypersetup{hidelinks}
+%------------------------------------------------------------------
+\title{Albert Einstein}
+\author{\LaTeX{} Albert Einstein}
+\date{1955}
+
+
+
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %                       UPPER PART
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    %                       HEADER
+    %-------------------------------------------------------------
+    %Usage: \header{background-color}{name-color}{name}{title-color}{title}{summary-color}{summary}{portrait.jpg}{email@example.com}{phone}{country-flag.png}{city}{linkedin-id}
+    \header
+    {\textbf{Moussa Kalla}}
+    {\textbf{Data Scientist  $\cdot$ Quantitative Trader $\cdot$ Mathematician}}
+    { \normalsize  
+As a future graduate of a Master's degree in complex systems engineering with a specialization in Data Science and Artificial Intelligence,
+\textbf{I am looking for a six-month end-of-study internship starting in March 2024.}
+My continuous eagerness for \\ learning persists, and I am prepared to embrace fresh challenges while actively \\ engaging in tangible projects. My limitless creativity and strong productivity render me an invaluable addition to your team.
+
+}
+    {assets/portrait2.jpg}
+
+    %-------------------------------------------------------------
+    %                       CONTACT BAND
+    %-------------------------------------------------------------
+    % Usage: \contactband{background-color}{text-color}{email}{phone-number}{country-flag}{city}{linkedin-id}
+    \contactband{moussakallaabdoulaye@gmail.com}{+33 744885914}{assets/france2.jpg}{174 Rue Michel Ange, Calais}{Moussa-Kalla}{25 years}
+
+    \vspace{\headerheight} % The header is only a TIKZ image. We must give it space to appear and not be hidden by what comes next.
+
+    \setlength{\columnsep}{0px}
+    \columnratio{\lratio}
+    \begin{paracol}{2}
+        \paracolbackgroundoptions
+        \begin{leftcolumn} \noindent \footnotesize
+           \footnotesize\color{white}
+            \heading{\faCogs}{MY SKILLS
+}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{c}
+                    \bubblediagram{
+                    % Usage: \bubblediagram{list of comma-separated text items}
+                    % The first item will be written in the main bubble, at the center of the diagram
+                    % All other items will be written in their own satellite bubble
+                        % Main bubble
+                        {\textbf{\;\;Programmation} \\ \textbf{\&}\\
+                        \textbf{Software}},
+                        \textbf{Latex}   \textbf{Writing},
+                        \textbf{Python \& C++},
+                        \textbf{Expert Advisor}\\ \textbf{MQL5},
+                        \textbf{HTML \& CSS},
+                         \textbf{\;\;\;\;The Office\;\;} \\ \textbf{\;\;\;Pack\;\;\;\;},
+                        \textbf{\;\;R Studio\;\;},
+                        \textbf{\;Matlab\;}
+                       } 
+                \end{tabular}
+            \end{minipage}
+                    
+           \footnotesize\color{white}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{c}
+                    \bubblediagram{
+                    % Usage: \bubblediagram{list of comma-separated text items}
+                    % The first item will be written in the main bubble, at the center of the diagram
+                    % All other items will be written in their own satellite bubble
+                        % Main bubble
+                        {\textbf{Data Science} \\ \textbf{\&}\\
+                        \textbf{Machine Learning}},
+                        % Satellites
+                        \textbf{Data Analysis},
+                        \textbf{Database} \\  \textbf{Management} \\  \textbf{System},
+                        \textbf{Deep Learning},
+                        \textbf{Data} \\ \textbf{Visualization},
+                        \textbf{Regression}
+                       } 
+                \end{tabular}
+            \end{minipage}
+{\color{white}
+            \heading{\faStar}{Softskills}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                     Adaptability & \pictofraction{4}\\ [0.04em]
+                    Team spirit & \pictofraction{4}\\ [0.04em]
+                    Dynamism & \pictofraction{4}
+                \end{tabular}
+            \end{minipage}
+        }
+        \end{leftcolumn}
+         \begin{leftcolumn} \noindent \footnotesize
+        {\color{white}
+            %-------------------------------------------------------------
+            %                       LANGUAGES
+            %-------------------------------------------------------------
+              % To leave a margin with the top of the page
+            \heading{\faLanguage}{LANGUAGES}
+            \begin{minipage}[r]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                    \textbf{Haoussa} &    \textbf{Mother tongue} \\[0.03em]
+                    \textbf{French} & \textbf{bilingual}\\[0.03em]
+                    \textbf{English}  & \textbf{Intermediate}
+                \end{tabular}
+            \end{minipage}
+        }
+
+        \end{leftcolumn}
+          \begin{rightcolumn}\noindent \small
+            \hspace{-2.4pt}\heading{\faGraduationCap}{FORMAL EDUCATION}
+            \cvevent{Sep 2023}{Sep 2024}{Master Year 2 - Complex Systems Engineering, Major in Data science \& A.I}{École d’ingénieur du Littoral cote d’Opale\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:Université du Littoral Côte d'Opale}{Calais, France}{assets/Eilco5.jpg}{$\bullet$ Big data, Data analysis, Machine learning, Artificial intelligence..\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Admitted to this school through an exchange
+            program.}
+              \vspace{0.005cm}\\
+            \cvevent{Sep 2022}{Jul 2023}{Master Year 1 - Mathematical Engineering}{Faculty of Science \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: Mohammed V University}{Rabat, Morocco}{assets/FSR3.jpg}
+            {$\bullet$ Stochastic modeling,
+Advanced optimization, Mathematical programming.\: \:\:\: \:\:\: \:\:\: \:\ \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ The Master's program is extremely selective and provides advanced education in applied mathematics.}
+               \vspace{0.005cm}\\
+            \cvevent{Sep 2021}{Jul 2018}{Bachelor's degree - Applied mathematics}{Faculty of Science and Technology \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: Sultan Moulay Slimane University}{Beni Mellal, Morocco}{assets/fstbm1.jpg}
+            {$\bullet$ End of study project: Approximation of stochastic equations. \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:$\bullet$ Ranked $4^{th}$ out of 33 students in my classroom}
+              \vspace{0.005cm}\\
+            \cvdevent{Sep 2015}{Jul 2018}{Baccalaureate - Scientific series D }{Lycée Issa Korombé}{Niamey, Niger}{}
+            {$\bullet$ Ranked First in my high
+school.}}
+            \end{rightcolumn}
+        \begin{rightcolumn}\noindent \small
+            \hspace{-2.4pt}\heading{\faSuitcase}{WORK EXPERIENCE}
+            \cvevent{2024}{Feb - Sep}{ Data Scientis \& Modelling Engineer - Intern }{ArcelorMittal}{Dunkerque, France}{assets/arcelormittal_.jpg}
+            {$\bullet$ Analyse pointue de la base de données issues du processus de coulée continue, puis développement d'un modèle prédictif pour renforcer la détection d'incidents dans la chaine de production.}
+            \vspace{0.01cm}\\
+            \cvevent{2023}{Oct}{Project : Applying Deep Learning to predict fluctuations in the CAC40 index.}{École d’ingénieur du Littoral cote d’Opale}{Calais, France}{assets/EILCO5.jpg}
+            {$\bullet$ This project is dedicated to employing deep neural networks to model time series data of CAC40 prices alongside economic indicators.}
+            \vspace{0.01cm}\\
+            \cvcevent{2023}{Mar - Aug}{Prop Firm Trader chez Myforexfunds}{Traders Global Group Incorporated}{}{assets/mfff.jpg}
+            {$\bullet$ Validation of the two-phase challenge and obtaining an account funded at \$10K. \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Management of the
+            \$10K account with a profit of 20\% in four months.
+            }
+            \vspace{0.01cm}\\
+            \cvevent{2022}{Feb - Jun}{End of study internship - Approximation of stochastic equations}{Faculty of Science and Technology}{Béni Mellal, Morroco}{assets/fstbm1.jpg}
+            {Application of the Black-Scholes model for: \: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:
+            $\bullet$ The evaluation
+of an option and some other derivative products\.\: \:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\:\: \:\: $\bullet$ Algorithmic trading, creation of an
+Expert Advisor with MQL5 on MetaTrader 5}
+        \end{rightcolumn}
+          
+            
+        
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+       
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        
+\begin{leftcolumn} \noindent \small
+    \heading{\faHeartbeat}{MY HOBBIES}
+    \textcolor{white}{\: \faLineChart\ Sotck exchange}
+    \textcolor{white}{\:\faSoccerBallO \ Football}
+    \textcolor{white}{\: \faLeaf\ Ecology} \\
+      \textcolor{white}{\: \faGamepad \ Video games}
+      \textcolor{white}{\: \faBook\ Reading}
+    \textcolor{white}{\: \faPlane\ Travel }
+\end{leftcolumn}
+        \begin{leftcolumn}\noindent \footnotesize
+        {\color{white}
+            \heading{\faQuoteLeft}{MY PHILOSOPHY}
+            \fbox{\begin{minipage}[2]{0.93\leftcolwidth}
+                   I always make sure to have \textbf{"Skin in the game"} in everything I do in my life.
+\\ [0.9em]
+                    \simplequote{Simply : if you can’t put your soul into something, give it up and leave that stuff to someone else.
+                    }{\textbf{Nassim Nicholas Taleb}, \og Skin in the Game: Hidden Asymmetries in Daily Life\fg.}
+                \end{minipage}}
+        \end{leftcolumn}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \small
+            \hspace{-2.4pt}\heading{\faTv}{SELF-EDUCATION}
+            \cvcevent{2023}{Sep - oct}{Mathematics Of Big Data And Machine Learning}{VIA MIT OPEN COURSE WARE}{}{assets/mit.jpg}
+            {$\bullet$ This course introduces the Dynamic Distributed Dimensional Data Model (D4M), a breakthrough in computer programming that combines graph theory, linear algebra, and databases to address problems associated with Big Data.}
+             \vspace{0.005cm}\\
+            \cvcevent{2022}{Jun - Aug}{Financial market}{VIA TKL Academy}{}{assets/tkl1.jpg}
+            {$\bullet$Technical and fundamental analysis of a financial asset. \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:$\bullet$ Financial market psychology.\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:$\bullet$  Risk management and
+money management.}
+            \end{rightcolumn}
+            \begin{rightcolumn}\noindent \small
+        \end{rightcolumn}
+        \vspace{0em}
+    \end{paracol}
+\end{document}
