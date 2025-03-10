@@ -5,11 +5,7 @@ Bienvenue dans ce repository contenant mes CVs écrits en LaTeX. Vous trouverez 
 ## Prévisualisation du CV
 
 [📄 Télécharger](https://github.com/Moussa-Kalla/Mes-CVs/blob/main/Mon_CV.pdf)
-[Voir le CV en plein écran](https://github.com/Moussa-Kalla/Mes-CVs/blob/main/Mon_CV.png?raw=true)
-
-
-
-
+![Aperçu du projet](https://github.com/Moussa-Kalla/Mes-CVs/blob/main/Mon_CV.png?raw=true)
 
 
 ## Compiler le CV LaTeX
