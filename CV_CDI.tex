@@ -1,67 +1,37 @@
 \documentclass[theme]{cv_einstein}
-% Read cv_einstein.cls to look at all available options
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage{xcolor}
 \usepackage{fontawesome}
 \usepackage[french]{babel}
 \usepackage{tikz}
-% Caution: pargin=0cm means the CV won't print well.
-% Using this template means that you accept it.
 \usepackage[a4paper, portrait, margin=0cm]{geometry}
 \usepackage{fontawesome}
-\usepackage{array} % For better tabl formatting. See: https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
-\usepackage{enumitem} % See https://tex.stackexchange.com/a/199073/304372
+\usepackage{array} 
+\usepackage{enumitem}
 \usepackage[pdftex, pdfauthor={Albert Einstein}, pdftitle={Albert Einstein, Public CV}, pdfsubject={CV of Albert Einstein},
 pdfkeywords={Physics, Science, Applied Research, Fundamental Research}]
 {hyperref}
-
-
 \begin{document}
-%------------------------------------------------------------------ Variables
-% The left column contains the goals, summary, skills, etc.
-% We define its width w.r.t. the width of the whole page
 \newcommand{\lratio}{0.318}
 \newlength{\leftcolwidth}
 \setlength{\leftcolwidth}{\lratio\textwidth}
-% The right column contains the main content, i.e. work experience, education, etc.
 \newcommand{\rratio}{0.705}
 \newlength{\rightcolwidth}
 \setlength{\rightcolwidth}{\rratio\textwidth}
-% Space to leave below a section, above the title of the following section
 \newlength{\sectionspace}
 \setlength{\sectionspace}{0.5cm}
-% Space to leave below an item, above the following item
 \newlength{\itemspace}
 \setlength{\itemspace}{10pt}
-% fbox stuff. You won't need to adjust these. You can safely ignore.
 \setlength{\fboxrule}{0pt}
-\setlength{\fboxsep}{4pt}
-% Shortcuts to have table columns with fixed width AND positionning: [L]eft, [C]enter, [R]ight
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-% Removes the (ugly) box around html links
 \hypersetup{hidelinks}
-%------------------------------------------------------------------
 \title{Albert Einstein}
 \author{\LaTeX{} Albert Einstein}
 \date{1955}
 
-
-
-    %-------------------------------------------------------------
-    %-------------------------------------------------------------
-    %-------------------------------------------------------------
-    %                       UPPER PART
-    %-------------------------------------------------------------
-    %-------------------------------------------------------------
-    %-------------------------------------------------------------
-
-    %-------------------------------------------------------------
-    %                       HEADER
-    %-------------------------------------------------------------
-    %Usage: \header{background-color}{name-color}{name}{title-color}{title}{summary-color}{summary}{portrait.jpg}{email@example.com}{phone}{country-flag.png}{city}{linkedin-id}
     \header
     {\textbf{Moussa Kalla}}
     {\textbf{Data Scientist · Quantitative Researcher}}
@@ -70,13 +40,9 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
     }
     {assets/portrait4.png}
 
-    %-------------------------------------------------------------
-    %                       CONTACT BAND
-    %-------------------------------------------------------------
-    % Usage: \contactband{background-color}{text-color}{email}{phone-number}{country-flag}{city}{linkedin-id}
     \contactband{moussa.kalla.am@gmail.com }{+33 744885914}{assets/france2.jpg}{Poitiers, France}{Mon LinkedIn}{Mon Github}
 
-    \vspace{\headerheight} % The header is only a TIKZ image. We must give it space to appear and not be hidden by what comes next.
+    \vspace{\headerheight} 
 
     \setlength{\columnsep}{0px}
     \columnratio{\lratio}
@@ -93,10 +59,6 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
             \begin{minipage}[c]{\leftcolwidth}
                 \begin{tabular}{c}
                     \bubblediagram{
-                    % Usage: \bubblediagram{list of comma-separated text items}
-                    % The first item will be written in the main bubble, at the center of the diagram
-                    % All other items will be written in their own satellite bubble
-                        % Main bubble
                         {\textbf{\;\;Programmation} \\ \textbf{\&}\\
                         \textbf{Logiciels}},
                         \textbf{Python \& C++},
@@ -111,13 +73,8 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
 \begin{minipage}[c]{\leftcolwidth}
                 \begin{tabular}{c}
                     \bubblediagram{
-                    % Usage: \bubblediagram{list of comma-separated text items}
-                    % The first item will be written in the main bubble, at the center of the diagram
-                    % All other items will be written in their own satellite bubble
-                        % Main bubble
                         {\textbf{Data Science} \\ \textbf{\&}\\
                         \textbf{Machine Learning}},
-                        % Satellites
                         \textbf{Data Analysis},
                         \textbf{Database} \\  \textbf{Management} \\  \textbf{System},
                         \textbf{Deep Learning},
@@ -139,10 +96,6 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
         \end{leftcolumn}
          \begin{leftcolumn} \noindent \footnotesize
         {\color{white}
-            %-------------------------------------------------------------
-            %                       LANGUAGES
-            %-------------------------------------------------------------
-              % To leave a margin with the top of the page
             \heading{\faLanguage}{Langues}
             \begin{minipage}[r]{\leftcolwidth}
                 \begin{tabular}{r|l}
@@ -195,21 +148,6 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
             \cvdevent{2015 - 2018}{}{Baccalauréat - Série scientifique D}{Lycée Issa Korombé}{Niamey, Niger}{}
             {$\bullet$ Premier de mon lycée.}}
             \end{rightcolumn}
-
-          
-            
-        
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
-        %                       LEFT COLUMN
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
-       
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
-        %                       RIGHT COLUMN
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
         
 \begin{leftcolumn} \noindent \small
     \heading{\faHeartbeat}{Mes Hobbies}
@@ -229,11 +167,6 @@ En tant que futur diplômé d'un Master spécialisé en Data Science et I.A,\\ \
 
 }
         \end{leftcolumn}
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
-        %                       RIGHT COLUMN
-        %-------------------------------------------------------------
-        %-------------------------------------------------------------
         \begin{rightcolumn}\noindent \small
             \hspace{-2.4pt}\heading{\faTv}{CERTIFICATIONS}
             \cvcevent{2023}{Sept - oct}{Azure Data Fundamentals}{E-Learning}{}{assets/azure-data.png}
